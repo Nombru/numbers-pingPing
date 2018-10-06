@@ -1,7 +1,9 @@
 // Business Logic
 
-function countDown(inputNumber, resultList){
+var countDown = function(inputNumber, resultList){
   for (var index = 1; index <= inputNumber; index += 1){
+// NEED TO FIGURE OUT HOW TO APPEND THE LIST FOR NEW ENTRY
+    $("#output").remove();
     $(resultList).append("<li>" + divisible(index) + " </li>");
   }
 }
@@ -18,23 +20,6 @@ var divisible = function(inputNumber){
   }
 }
 
-// var emptyArray = []
-// var total = 0;
-// var countTo = parseInt($("#number1").val());
-// var countBy = parseInt($("#number2").val());
-//
-// var countingNumber = Math.floor(countTo/countBy);
-// 
-// if (isNaN(countingNumber)) {
-//   alert("Enter some numbers");
-// } else {
-//   for (index = 0; index <= countingNumber; index += 1) {
-//     total = index * countBy;
-//     emptyArray.push(total);
-//     $(".results").append(total);
-//     };
-//   };
-
 // User Input Logic
 $(document).ready(function() {
   $("form#input").submit(function(event){
@@ -42,7 +27,6 @@ $(document).ready(function() {
     console.log("hi");
 
     $(".alertmsg").remove();
-        $("#results li").remove();
 
         var inputNumber = parseInt($("input#numInput").val());
 
@@ -58,6 +42,25 @@ $(document).ready(function() {
         $("#output").fadeIn("slow");
 
 
+
+
+
+        // var emptyArray = []
+        // var total = 0;
+        // var countTo = parseInt($("#number1").val());
+        // var countBy = parseInt($("#number2").val());
+        //
+        // var countingNumber = Math.floor(countTo/countBy);
+        //
+        // if (isNaN(countingNumber)) {
+        //   alert("Enter some numbers");
+        // } else {
+        //   for (index = 0; index <= countingNumber; index += 1) {
+        //     total = index * countBy;
+        //     emptyArray.push(total);
+        //     $(".results").append(total);
+        //     };
+        //   };
 
     });
   });
