@@ -9,15 +9,24 @@
     <title>pingPong</title>
   </head>
   <body>
-<!-- Header -->
+<!-- Header/Intro Seciton-->
+  <div id="into-section">
     <div class="container">
       <h1>pingPong: an exporation into Javascript Arrays and Loops</h1>
       <p>To get started enter a number and click on the submit button</p>
     </div>
-<!-- Form asking for Number -->
+<!-- Intro: Explination of the program -->
+    <div class="container">
+      <img src="img/pingpong.gif" class="pingpong-img" />
+      <p>Ping Pong will count up to your chosen number with the following exceptions:</p>
+      <p>Numbers <strong>divisible by 3</strong> are "ping"</p>
+      <p>Numbers <strong>divisible by 5</strong> are "pong"</p>
+      <p>Numbers <strong>divisible by 15</strong> are "pingpong"</p>
+    </div>
+  </div>
+<!-- Form: Asking for Number -->
     <div class="container">
       <form id="input">
-
         <div class="form-group">
           <label for="numInput">Number</label>
           <input id="numInput" class="form-control" type="text" placeholder="Enter a number">
@@ -28,8 +37,10 @@
     </div>
 <!--Output-->
   <div class="container">
-    <div id="output">
-      <p><span class="output"></span></p>
+    <div class="output">
+      <p>
+        <ul id="output"></ul>
+      </p>
     </div>
   </div>
   </body>
