@@ -1,12 +1,17 @@
 // Business Logic
 
+// var remove = function(output) {
+//   var element = document.getElementById("#output");
+//   element.parentNode.removeChild(element);
+// }
+
 var countDown = function(inputNumber, resultList){
   for (var index = 1; index <= inputNumber; index += 1){
-// NEED TO FIGURE OUT HOW TO APPEND THE LIST FOR NEW ENTRY
-    $("#output").remove();
-    $(resultList).append("<li>" + divisible(index) + " </li>");
+    $(resultList).append("<li class= 'output_li'>" + divisible(index) + " </li>");
   }
 }
+
+
 
 var divisible = function(inputNumber){
   if ((inputNumber % 15) === 0){
@@ -20,6 +25,8 @@ var divisible = function(inputNumber){
   }
 }
 
+
+
 // User Input Logic
 $(document).ready(function() {
   $("form#input").submit(function(event){
@@ -27,6 +34,8 @@ $(document).ready(function() {
     console.log("hi");
 
     $(".alertmsg").remove();
+    $(".output_li").remove();
+
 
         var inputNumber = parseInt($("input#numInput").val());
 
@@ -40,6 +49,7 @@ $(document).ready(function() {
 
         var result = countDown(inputNumber, ".output");
         $("#output").fadeIn("slow");
+
 
 
 
