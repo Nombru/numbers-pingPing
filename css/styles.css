@@ -2,6 +2,9 @@
   display: none;
 }
 
-#intro-section {
-
+#pingpong-img
+ {
+       width: auto;
+       padding: 25px;
+       margin: 25px;
 }
